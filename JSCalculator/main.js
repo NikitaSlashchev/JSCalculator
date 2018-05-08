@@ -1,5 +1,5 @@
 while (exit != true) {
-	var inputMenu = +prompt('Calculator ^_^ \n 1:Addition \n 2:Subtraction \n 3:Division \n 4:Multiplication', '');
+	var inputMenu = +prompt('Calculator ^_^ \n 1:Addition \n 2:Subtraction \n 3:Division \n 4:Multiplication \n 5:Exponentiation', '');
 	switch (inputMenu) {
 
 		case 1:
@@ -24,6 +24,12 @@ while (exit != true) {
 			var a = +prompt('Type a', '');
 			var b = +prompt('Type b', '');
 			alert(multiplyNumber(a, b));
+			break;
+			
+		case 5:
+			var x = +prompt('Type x', '');
+			var n = +prompt('Type n', '');
+			alert(expNumber(x, n));
 			break;
 
 		default:
@@ -53,4 +59,9 @@ function divisionNumber(a, b) {
 function multiplyNumber(a, b) {
 
 	return a * b;
+}
+
+function expNumber(x, n){
+	
+	return Math.pow(x, n);
 }
